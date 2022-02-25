@@ -58,7 +58,8 @@ class APICalculatorController extends AbstractController
     {
         $data = json_decode($request->getContent(), true);
         $value1 = intval($data['value1']);
-        $value2 = intval($data['value2']);
-        return $this->json(['value' => $calculator->square($value1, $value2)]);
+        return $this->json(['value' => $calculator->square($value1)]);
     }
+
+    
 }
